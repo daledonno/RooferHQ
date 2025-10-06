@@ -433,15 +433,15 @@ const Pipeline = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="p-4 lg:p-8 max-w-7xl mx-auto"
+      className="p-2 sm:p-4 lg:p-8 max-w-7xl mx-auto"
     >
       {/* Controls */}
-      <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-4 lg:mb-6">
+      <div className="flex flex-col sm:flex-row gap-1.5 sm:gap-2 lg:gap-3 mb-3 sm:mb-4 lg:mb-6">
         <button
           onClick={() => setShowCustomerForm(true)}
-          className="flex items-center justify-center space-x-2 px-3 lg:px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors text-sm lg:text-base"
+          className="flex items-center justify-center space-x-1.5 sm:space-x-2 px-2.5 sm:px-3 lg:px-4 py-1.5 sm:py-2 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors text-xs sm:text-sm lg:text-base"
         >
-          <Plus size={16} className="lg:w-4 lg:h-4" />
+          <Plus size={14} className="sm:w-4 sm:h-4 lg:w-4 lg:h-4" />
           <span>Add New Lead</span>
         </button>
         <button
@@ -458,9 +458,9 @@ const Pipeline = () => {
               }, 100);
             }
           }}
-          className="flex items-center justify-center space-x-2 px-3 lg:px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors text-sm lg:text-base"
+          className="flex items-center justify-center space-x-1.5 sm:space-x-2 px-2.5 sm:px-3 lg:px-4 py-1.5 sm:py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors text-xs sm:text-sm lg:text-base"
         >
-          <Trash2 size={16} className="lg:w-4 lg:h-4" />
+          <Trash2 size={14} className="sm:w-4 sm:h-4 lg:w-4 lg:h-4" />
           <span>Clear All</span>
         </button>
         <button
@@ -476,15 +476,15 @@ const Pipeline = () => {
               alert('Error saving data. Please try again.');
             }
           }}
-          className="flex items-center justify-center space-x-2 px-3 lg:px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm lg:text-base"
+          className="flex items-center justify-center space-x-1.5 sm:space-x-2 px-2.5 sm:px-3 lg:px-4 py-1.5 sm:py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-xs sm:text-sm lg:text-base"
         >
-          <Save size={16} className="lg:w-4 lg:h-4" />
+          <Save size={14} className="sm:w-4 sm:h-4 lg:w-4 lg:h-4" />
           <span>Save Progress</span>
         </button>
       </div>
 
       {/* Workflow Map */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 lg:gap-4 mb-6 lg:mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 sm:gap-3 lg:gap-4 mb-4 lg:mb-8">
         {workflowZones.map((zoneName, index) => {
           const zoneCustomers = getCustomersInZone(zoneName);
           const isFirstRow = index < 5;
@@ -496,7 +496,7 @@ const Pipeline = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/90 backdrop-blur-sm border border-white/30 rounded-2xl p-3 lg:p-4 min-h-[150px] lg:min-h-[200px] relative cursor-pointer hover:shadow-lg transition-all duration-300"
+              className="bg-white/90 backdrop-blur-sm border border-white/30 rounded-xl lg:rounded-2xl p-2 sm:p-3 lg:p-4 min-h-[120px] sm:min-h-[150px] lg:min-h-[200px] relative cursor-pointer hover:shadow-lg transition-all duration-300"
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, zoneName)}
               onClick={() => {
@@ -508,25 +508,25 @@ const Pipeline = () => {
               }}
             >
               {/* Zone Header */}
-              <div className="flex items-center mb-2 lg:mb-3">
-                <span className="text-lg lg:text-xl mr-2">{getZoneIcon(zoneName)}</span>
-                <h3 className="font-semibold text-gray-800 text-xs lg:text-sm">{getZoneTitle(zoneName)}</h3>
+              <div className="flex items-center mb-1 sm:mb-2 lg:mb-3">
+                <span className="text-base sm:text-lg lg:text-xl mr-1 sm:mr-2">{getZoneIcon(zoneName)}</span>
+                <h3 className="font-semibold text-gray-800 text-xs sm:text-sm lg:text-sm truncate">{getZoneTitle(zoneName)}</h3>
               </div>
               
               {/* Zone Description */}
-              <p className="text-xs text-gray-600 mb-3 lg:mb-4 leading-relaxed">
+              <p className="text-xs text-gray-600 mb-2 sm:mb-3 lg:mb-4 leading-tight sm:leading-relaxed line-clamp-2">
                 {getZoneDescription(zoneName)}
               </p>
               
               {/* Customer Heads */}
-              <div className="min-h-[40px] lg:min-h-[60px] flex flex-wrap gap-1 lg:gap-2">
+              <div className="min-h-[30px] sm:min-h-[40px] lg:min-h-[60px] flex flex-wrap gap-1 lg:gap-2">
                 {zoneCustomers.map((customer, customerIndex) => (
                   <motion.div
                     key={customer.id}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.3 }}
-                    className="w-10 h-10 lg:w-12 lg:h-12 rounded-full cursor-grab active:cursor-grabbing border-2 border-white shadow-lg relative group"
+                    className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full cursor-grab active:cursor-grabbing border-2 border-white shadow-lg relative group"
                     draggable
                     onDragStart={(e) => handleDragStart(e, customer.id)}
                     onContextMenu={(e) => handleContextMenu(e, customer.id)}
@@ -550,14 +550,14 @@ const Pipeline = () => {
 
                     {/* Calendar Button */}
                     <button
-                      className="absolute -top-1 -right-1 w-4 h-4 lg:w-5 lg:h-5 bg-blue-500 hover:bg-blue-600 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-lg z-20"
+                      className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 bg-blue-500 hover:bg-blue-600 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-lg z-20"
                       onClick={(e) => {
                         e.stopPropagation();
                         openCalendarModal(customer);
                       }}
                       title="Add to Calendar"
                     >
-                      <Calendar size={10} className="lg:w-3 lg:h-3" />
+                      <Calendar size={8} className="sm:w-2 sm:h-2 lg:w-3 lg:h-3" />
                     </button>
                   </motion.div>
                 ))}
