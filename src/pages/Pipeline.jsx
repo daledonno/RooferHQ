@@ -433,17 +433,15 @@ const Pipeline = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="p-8 max-w-7xl mx-auto"
+      className="p-4 lg:p-8 max-w-7xl mx-auto"
     >
-
-
       {/* Controls */}
-      <div className="flex gap-3 mb-6">
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-4 lg:mb-6">
         <button
           onClick={() => setShowCustomerForm(true)}
-          className="flex items-center space-x-2 px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors"
+          className="flex items-center justify-center space-x-2 px-3 lg:px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors text-sm lg:text-base"
         >
-          <Plus size={16} />
+          <Plus size={16} className="lg:w-4 lg:h-4" />
           <span>Add New Lead</span>
         </button>
         <button
@@ -460,9 +458,9 @@ const Pipeline = () => {
               }, 100);
             }
           }}
-          className="flex items-center space-x-2 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
+          className="flex items-center justify-center space-x-2 px-3 lg:px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors text-sm lg:text-base"
         >
-          <Trash2 size={16} />
+          <Trash2 size={16} className="lg:w-4 lg:h-4" />
           <span>Clear All</span>
         </button>
         <button
@@ -478,15 +476,15 @@ const Pipeline = () => {
               alert('Error saving data. Please try again.');
             }
           }}
-          className="flex items-center space-x-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+          className="flex items-center justify-center space-x-2 px-3 lg:px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm lg:text-base"
         >
-          <Save size={16} />
+          <Save size={16} className="lg:w-4 lg:h-4" />
           <span>Save Progress</span>
         </button>
       </div>
 
       {/* Workflow Map */}
-      <div className="grid grid-cols-5 grid-rows-2 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 lg:gap-4 mb-6 lg:mb-8">
         {workflowZones.map((zoneName, index) => {
           const zoneCustomers = getCustomersInZone(zoneName);
           const isFirstRow = index < 5;
@@ -498,7 +496,7 @@ const Pipeline = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/90 backdrop-blur-sm border border-white/30 rounded-2xl p-4 min-h-[200px] relative cursor-pointer hover:shadow-lg transition-all duration-300"
+              className="bg-white/90 backdrop-blur-sm border border-white/30 rounded-2xl p-3 lg:p-4 min-h-[150px] lg:min-h-[200px] relative cursor-pointer hover:shadow-lg transition-all duration-300"
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, zoneName)}
               onClick={() => {
@@ -510,25 +508,25 @@ const Pipeline = () => {
               }}
             >
               {/* Zone Header */}
-              <div className="flex items-center mb-3">
-                <span className="text-xl mr-2">{getZoneIcon(zoneName)}</span>
-                <h3 className="font-semibold text-gray-800 text-sm">{getZoneTitle(zoneName)}</h3>
+              <div className="flex items-center mb-2 lg:mb-3">
+                <span className="text-lg lg:text-xl mr-2">{getZoneIcon(zoneName)}</span>
+                <h3 className="font-semibold text-gray-800 text-xs lg:text-sm">{getZoneTitle(zoneName)}</h3>
               </div>
               
               {/* Zone Description */}
-              <p className="text-xs text-gray-600 mb-4 leading-relaxed">
+              <p className="text-xs text-gray-600 mb-3 lg:mb-4 leading-relaxed">
                 {getZoneDescription(zoneName)}
               </p>
               
               {/* Customer Heads */}
-              <div className="min-h-[60px] flex flex-wrap gap-2">
+              <div className="min-h-[40px] lg:min-h-[60px] flex flex-wrap gap-1 lg:gap-2">
                 {zoneCustomers.map((customer, customerIndex) => (
                   <motion.div
                     key={customer.id}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.3 }}
-                    className="w-12 h-12 rounded-full cursor-grab active:cursor-grabbing border-2 border-white shadow-lg relative group"
+                    className="w-10 h-10 lg:w-12 lg:h-12 rounded-full cursor-grab active:cursor-grabbing border-2 border-white shadow-lg relative group"
                     draggable
                     onDragStart={(e) => handleDragStart(e, customer.id)}
                     onContextMenu={(e) => handleContextMenu(e, customer.id)}
@@ -552,14 +550,14 @@ const Pipeline = () => {
 
                     {/* Calendar Button */}
                     <button
-                      className="absolute -top-1 -right-1 w-5 h-5 bg-blue-500 hover:bg-blue-600 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-lg z-20"
+                      className="absolute -top-1 -right-1 w-4 h-4 lg:w-5 lg:h-5 bg-blue-500 hover:bg-blue-600 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-lg z-20"
                       onClick={(e) => {
                         e.stopPropagation();
                         openCalendarModal(customer);
                       }}
                       title="Add to Calendar"
                     >
-                      <Calendar size={12} />
+                      <Calendar size={10} className="lg:w-3 lg:h-3" />
                     </button>
                   </motion.div>
                 ))}
@@ -567,13 +565,13 @@ const Pipeline = () => {
 
               {/* Arrow indicators */}
               {!isLastInRow && (
-                <div className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 text-gray-400">
-                  →
+                <div className="absolute right-[-10px] lg:right-[-20px] top-1/2 transform -translate-y-1/2 text-gray-400 hidden sm:block">
+                  <span className="text-lg lg:text-xl">→</span>
                 </div>
               )}
               {!isFirstRow && index === 9 && (
-                <div className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 text-gray-400">
-                  ↓
+                <div className="absolute bottom-[-10px] lg:bottom-[-20px] left-1/2 transform -translate-x-1/2 text-gray-400 hidden sm:block">
+                  <span className="text-lg lg:text-xl">↓</span>
                 </div>
               )}
             </motion.div>
@@ -644,12 +642,12 @@ const Pipeline = () => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="bg-white rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl"
+            className="bg-white rounded-2xl p-4 lg:p-6 max-w-md w-full mx-4 shadow-2xl max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xl font-bold text-gray-800 flex items-center">
-                <Calendar className="w-5 h-5 mr-2 text-blue-500" />
+              <h3 className="text-lg lg:text-xl font-bold text-gray-800 flex items-center">
+                <Calendar className="w-4 h-4 lg:w-5 lg:h-5 mr-2 text-blue-500" />
                 Add to Calendar
               </h3>
               <button
@@ -718,20 +716,20 @@ const Pipeline = () => {
               })()}
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
               <button
                 onClick={() => {
                   const eventSuggestion = getEventSuggestion(selectedCustomerForCalendar);
                   addToCalendar(selectedCustomerForCalendar, eventSuggestion);
                 }}
-                className="flex-1 bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center"
+                className="flex-1 bg-blue-500 text-white py-2 lg:py-3 rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center text-sm lg:text-base"
               >
                 <Calendar className="w-4 h-4 mr-2" />
                 Add to Google Calendar
               </button>
               <button
                 onClick={() => setShowCalendarModal(false)}
-                className="flex-1 bg-gray-200 text-gray-700 py-3 rounded-lg hover:bg-gray-300 transition-colors"
+                className="flex-1 bg-gray-200 text-gray-700 py-2 lg:py-3 rounded-lg hover:bg-gray-300 transition-colors text-sm lg:text-base"
               >
                 Cancel
               </button>
@@ -769,9 +767,9 @@ const CustomerForm = ({ onAdd, onCancel }) => {
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        className="bg-white rounded-2xl p-6 max-w-md w-full mx-4"
+        className="bg-white rounded-2xl p-4 lg:p-6 max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto"
       >
-        <h3 className="text-xl font-bold text-gray-800 mb-4">Add New Customer</h3>
+        <h3 className="text-lg lg:text-xl font-bold text-gray-800 mb-3 lg:mb-4">Add New Customer</h3>
         
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -782,7 +780,7 @@ const CustomerForm = ({ onAdd, onCancel }) => {
               type="text"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800 placeholder-gray-500"
+              className="w-full p-2 lg:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800 placeholder-gray-500 text-sm lg:text-base"
               placeholder="Enter customer name"
               required
             />
@@ -793,7 +791,7 @@ const CustomerForm = ({ onAdd, onCancel }) => {
             <select
               value={formData.gender}
               onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800"
+              className="w-full p-2 lg:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800 text-sm lg:text-base"
             >
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -831,7 +829,7 @@ const CustomerForm = ({ onAdd, onCancel }) => {
               type="tel"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800 placeholder-gray-500"
+              className="w-full p-2 lg:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800 placeholder-gray-500 text-sm lg:text-base"
               placeholder="(555) 123-4567"
             />
           </div>
@@ -844,22 +842,22 @@ const CustomerForm = ({ onAdd, onCancel }) => {
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800 placeholder-gray-500"
+              className="w-full p-2 lg:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800 placeholder-gray-500 text-sm lg:text-base"
               placeholder="customer@email.com"
             />
           </div>
 
-          <div className="flex gap-3 pt-4">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-4">
             <button
               type="submit"
-              className="flex-1 bg-accent text-white py-3 rounded-lg hover:bg-accent/90 transition-colors"
+              className="flex-1 bg-accent text-white py-2 lg:py-3 rounded-lg hover:bg-accent/90 transition-colors text-sm lg:text-base"
             >
               Add Customer
             </button>
             <button
               type="button"
               onClick={onCancel}
-              className="flex-1 bg-gray-200 text-gray-700 py-3 rounded-lg hover:bg-gray-300 transition-colors"
+              className="flex-1 bg-gray-200 text-gray-700 py-2 lg:py-3 rounded-lg hover:bg-gray-300 transition-colors text-sm lg:text-base"
             >
               Cancel
             </button>
@@ -886,9 +884,9 @@ const CustomerDetails = ({ customer, onSave, onCancel }) => {
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        className="bg-white rounded-2xl p-6 max-w-md w-full mx-4 max-h-[80vh] overflow-y-auto"
+        className="bg-white rounded-2xl p-4 lg:p-6 max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto"
       >
-        <h3 className="text-xl font-bold text-gray-800 mb-4">Edit Customer Details</h3>
+        <h3 className="text-lg lg:text-xl font-bold text-gray-800 mb-3 lg:mb-4">Edit Customer Details</h3>
         
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -899,7 +897,7 @@ const CustomerDetails = ({ customer, onSave, onCancel }) => {
               type="text"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800"
+              className="w-full p-2 lg:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800 text-sm lg:text-base"
             />
           </div>
 
@@ -908,7 +906,7 @@ const CustomerDetails = ({ customer, onSave, onCancel }) => {
             <select
               value={formData.gender}
               onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800"
+              className="w-full p-2 lg:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800 text-sm lg:text-base"
             >
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -946,7 +944,7 @@ const CustomerDetails = ({ customer, onSave, onCancel }) => {
               type="tel"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800"
+              className="w-full p-2 lg:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800 text-sm lg:text-base"
             />
           </div>
 
@@ -958,7 +956,7 @@ const CustomerDetails = ({ customer, onSave, onCancel }) => {
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800"
+              className="w-full p-2 lg:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800 text-sm lg:text-base"
             />
           </div>
 
@@ -967,7 +965,7 @@ const CustomerDetails = ({ customer, onSave, onCancel }) => {
             <select
               value={formData.zone}
               onChange={(e) => setFormData({ ...formData, zone: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800"
+              className="w-full p-2 lg:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-gray-800 text-sm lg:text-base"
             >
               <option value="lead-intake">Lead Intake</option>
               <option value="initial-contact">Initial Contact</option>
@@ -982,17 +980,17 @@ const CustomerDetails = ({ customer, onSave, onCancel }) => {
             </select>
           </div>
 
-          <div className="flex gap-3 pt-4">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-4">
             <button
               type="submit"
-              className="flex-1 bg-accent text-white py-3 rounded-lg hover:bg-accent/90 transition-colors"
+              className="flex-1 bg-accent text-white py-2 lg:py-3 rounded-lg hover:bg-accent/90 transition-colors text-sm lg:text-base"
             >
               Save Changes
             </button>
             <button
               type="button"
               onClick={onCancel}
-              className="flex-1 bg-gray-200 text-gray-700 py-3 rounded-lg hover:bg-gray-300 transition-colors"
+              className="flex-1 bg-gray-200 text-gray-700 py-2 lg:py-3 rounded-lg hover:bg-gray-300 transition-colors text-sm lg:text-base"
             >
               Cancel
             </button>
