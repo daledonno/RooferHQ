@@ -17,7 +17,8 @@ import {
   BarChart3,
   Mail,
   Phone,
-  Database
+  Database,
+  Globe
 } from 'lucide-react';
 import DataBackup from '../components/DataBackup';
 
@@ -305,6 +306,17 @@ const Settings = () => {
         >
           <Database className="w-4 h-4 mr-2" />
           Data Backup
+        </button>
+        <button
+          onClick={() => setActiveTab('landing-page')}
+          className={`flex-1 flex items-center justify-center px-4 py-2 rounded-md transition-all duration-200 ${
+            activeTab === 'landing-page'
+              ? 'bg-white text-accent shadow-sm'
+              : 'text-gray-600 hover:text-gray-800'
+          }`}
+        >
+          <Globe className="w-4 h-4 mr-2" />
+          Landing Page
         </button>
       </div>
 
@@ -601,6 +613,156 @@ const Settings = () => {
       {/* Data Backup Tab */}
       {activeTab === 'data-backup' && (
         <DataBackup />
+      )}
+
+      {/* Landing Page Tab */}
+      {activeTab === 'landing-page' && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="space-y-8"
+        >
+          <div className="flex items-center mb-6">
+            <Globe size={24} className="text-accent mr-3" />
+            <h2 className="text-2xl font-bold text-gray-800">Landing Page</h2>
+          </div>
+
+          {/* Landing Page Overview */}
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-8">
+            <div className="flex items-start justify-between mb-6">
+              <div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">RooferHQ Marketing Landing Page</h3>
+                <p className="text-gray-600 mb-4">
+                  A high-converting, psychology-driven marketing page designed to transform visitors into customers.
+                </p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span className="text-sm font-medium text-green-700">Live</span>
+              </div>
+            </div>
+
+            {/* Key Features */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="space-y-3">
+                <h4 className="font-semibold text-gray-800">Conversion Features</h4>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Psychology-driven copy and design
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Video testimonials (TikTok-style)
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Social proof and case studies
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Risk reversal guarantees
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-3">
+                <h4 className="font-semibold text-gray-800">Technical Features</h4>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Mobile responsive design
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Fast loading optimization
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    SEO optimized
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    A/B testing ready
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://roofer-hq.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              >
+                <ExternalLink className="w-5 h-5 mr-2" />
+                View Landing Page
+              </a>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText('https://roofer-hq.vercel.app');
+                  // You could add a toast notification here
+                }}
+                className="flex items-center justify-center px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-colors duration-200 border border-gray-300"
+              >
+                <Copy className="w-5 h-5 mr-2" />
+                Copy URL
+              </button>
+            </div>
+          </div>
+
+          {/* Landing Page Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 text-center">
+              <div className="text-3xl font-bold text-accent mb-2">500+</div>
+              <div className="text-sm text-gray-600">Companies Using RooferHQ</div>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-xl p-6 text-center">
+              <div className="text-3xl font-bold text-accent mb-2">$2.3M</div>
+              <div className="text-sm text-gray-600">Revenue Generated</div>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-xl p-6 text-center">
+              <div className="text-3xl font-bold text-accent mb-2">4.9/5</div>
+              <div className="text-sm text-gray-600">Customer Rating</div>
+            </div>
+          </div>
+
+          {/* Video Testimonials Info */}
+          <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
+            <h4 className="font-semibold text-gray-800 mb-4 flex items-center">
+              <Calendar className="w-5 h-5 mr-2 text-accent" />
+              Video Testimonials
+            </h4>
+            <p className="text-gray-600 mb-4">
+              The landing page features TikTok-style vertical video testimonials showcasing real customer success stories.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="text-center">
+                <div className="w-16 h-20 bg-gray-200 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                  <span className="text-xs text-gray-500">Video 1</span>
+                </div>
+                <div className="text-sm font-medium text-gray-700">Mike Rodriguez</div>
+                <div className="text-xs text-gray-500">Rodriguez Roofing</div>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-20 bg-gray-200 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                  <span className="text-xs text-gray-500">Video 2</span>
+                </div>
+                <div className="text-sm font-medium text-gray-700">Sarah Johnson</div>
+                <div className="text-xs text-gray-500">Elite Roofing Solutions</div>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-20 bg-gray-200 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                  <span className="text-xs text-gray-500">Video 3</span>
+                </div>
+                <div className="text-sm font-medium text-gray-700">Tom Kowalski</div>
+                <div className="text-xs text-gray-500">Kowalski Roofing</div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       )}
     </motion.div>
   );
