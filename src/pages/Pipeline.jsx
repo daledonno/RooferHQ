@@ -469,7 +469,7 @@ const Pipeline = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="p-2 sm:p-4 lg:p-8 max-w-full mx-auto overflow-x-hidden"
+      className="p-4 lg:p-8 max-w-full mx-auto overflow-x-hidden"
     >
       {/* Controls */}
       <div className="flex flex-col sm:flex-row gap-1.5 sm:gap-2 lg:gap-3 mb-3 sm:mb-4 lg:mb-6">
