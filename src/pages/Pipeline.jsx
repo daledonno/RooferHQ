@@ -2,6 +2,42 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Plus, Trash2, Save, TrendingUp, Calendar, Clock, MapPin, User } from 'lucide-react';
 
+// Import character SVGs
+import char00 from '../assets/characters/00.svg';
+import char01 from '../assets/characters/01.svg';
+import char02 from '../assets/characters/02.svg';
+import char10 from '../assets/characters/10.svg';
+import char11 from '../assets/characters/11.svg';
+import char12 from '../assets/characters/12.svg';
+import char20 from '../assets/characters/20.svg';
+import char21 from '../assets/characters/21.svg';
+import char22 from '../assets/characters/22.svg';
+import char30 from '../assets/characters/30.svg';
+import char31 from '../assets/characters/31.svg';
+import char32 from '../assets/characters/32.svg';
+import char40 from '../assets/characters/40.svg';
+import char41 from '../assets/characters/41.svg';
+import char42 from '../assets/characters/42.svg';
+
+// Character mapping
+const characterMap = {
+  '00': char00,
+  '01': char01,
+  '02': char02,
+  '10': char10,
+  '11': char11,
+  '12': char12,
+  '20': char20,
+  '21': char21,
+  '22': char22,
+  '30': char30,
+  '31': char31,
+  '32': char32,
+  '40': char40,
+  '41': char41,
+  '42': char42,
+};
+
 const Pipeline = () => {
   const [customers, setCustomers] = useState([]);
   const [customerCounter, setCustomerCounter] = useState(1);
@@ -536,7 +572,7 @@ const Pipeline = () => {
                       setShowCustomerDetails(true);
                     }}
                     style={{
-                      backgroundImage: `url(/src/assets/characters/${customer.character}.svg)`,
+                      backgroundImage: `url(${characterMap[customer.character]})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center'
                     }}
@@ -663,7 +699,7 @@ const Pipeline = () => {
                 <div
                   className="w-12 h-12 rounded-full mr-3 border-2 border-gray-200"
                   style={{
-                    backgroundImage: `url(/src/assets/characters/${selectedCustomerForCalendar.character}.svg)`,
+                    backgroundImage: `url(${characterMap[selectedCustomerForCalendar.character]})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
@@ -812,7 +848,7 @@ const CustomerForm = ({ onAdd, onCancel }) => {
                       : 'border-gray-300 hover:border-gray-400'
                   }`}
                   style={{
-                    backgroundImage: `url(/src/assets/characters/${char}.svg)`,
+                    backgroundImage: `url(${characterMap[char]})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
@@ -927,7 +963,7 @@ const CustomerDetails = ({ customer, onSave, onCancel }) => {
                       : 'border-gray-300 hover:border-gray-400'
                   }`}
                   style={{
-                    backgroundImage: `url(/src/assets/characters/${char}.svg)`,
+                    backgroundImage: `url(${characterMap[char]})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
