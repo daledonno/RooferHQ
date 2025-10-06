@@ -59,33 +59,33 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="p-8"
+      className="p-4 lg:p-8"
     >
       {/* View Toggle */}
-      <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-800">RooferHQ Modules</h1>
-        <div className="flex bg-gray-100 rounded-lg p-1">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6 lg:mb-8">
+        <h1 className="text-2xl lg:text-3xl font-bold text-gray-800">RooferHQ Modules</h1>
+        <div className="flex bg-gray-100 rounded-lg p-1 w-full sm:w-auto">
           <button
             onClick={() => setViewMode('grid')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 ${
+            className={`flex items-center justify-center gap-2 px-3 lg:px-4 py-2 rounded-md transition-all duration-200 flex-1 sm:flex-none ${
               viewMode === 'grid'
                 ? 'bg-white text-accent shadow-sm'
                 : 'text-gray-600 hover:text-gray-800'
             }`}
           >
-            <Grid3X3 size={18} />
-            Grid View
+            <Grid3X3 size={16} className="lg:w-5 lg:h-5" />
+            <span className="text-sm lg:text-base">Grid</span>
           </button>
           <button
             onClick={() => setViewMode('list')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 ${
+            className={`flex items-center justify-center gap-2 px-3 lg:px-4 py-2 rounded-md transition-all duration-200 flex-1 sm:flex-none ${
               viewMode === 'list'
                 ? 'bg-white text-accent shadow-sm'
                 : 'text-gray-600 hover:text-gray-800'
             }`}
           >
-            <List size={18} />
-            List View
+            <List size={16} className="lg:w-5 lg:h-5" />
+            <span className="text-sm lg:text-base">List</span>
           </button>
         </div>
       </div>

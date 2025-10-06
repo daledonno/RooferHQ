@@ -121,7 +121,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`${isHomePage ? 'h-48' : 'h-24'} ${isMainPage ? 'bg-transparent' : 'bg-background/50'} backdrop-blur-md border-b border-white/10 flex items-center px-8 relative`}
+      className={`${isHomePage ? 'h-32 lg:h-48' : 'h-20 lg:h-24'} ${isMainPage ? 'bg-transparent' : 'bg-background/50'} backdrop-blur-md border-b border-white/10 flex items-center px-4 lg:px-8 relative`}
       style={isMainPage ? {
         backgroundImage: `url(${bannerImages[location.pathname] || bannerImages['/']})`,
         backgroundSize: 'cover',
@@ -134,7 +134,7 @@ const Header = () => {
       {isMainPage && (
         <div className="absolute inset-0 bg-black/50"></div>
       )}
-      <div className="flex items-center space-x-6 relative z-10">
+      <div className="flex items-center space-x-3 lg:space-x-6 relative z-10 w-full">
         {/* Back Button - only show on tool pages */}
         {isToolPage && (
           <motion.button
@@ -142,34 +142,34 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
             onClick={() => navigate(getParentPage(location.pathname))}
-            className="flex items-center space-x-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-200 border border-white/20"
+            className="flex items-center space-x-1 lg:space-x-2 px-2 lg:px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-200 border border-white/20"
           >
             <ArrowLeft size={16} className="text-white" />
-            <span className="text-white text-sm font-medium">Go Back</span>
+            <span className="text-white text-xs lg:text-sm font-medium hidden sm:inline">Go Back</span>
           </motion.button>
         )}
 
         {/* Logo */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-2 lg:space-x-3">
           <img 
             src={logo} 
             alt="RooferHQ Logo" 
-            className="h-12 w-auto"
+            className="h-8 lg:h-12 w-auto"
           />
         </div>
 
             {/* Page Title */}
-            <div className="flex-1">
+            <div className="flex-1 min-w-0">
               <motion.h1 
                 key={location.pathname}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-2xl font-bold text-white text-shadow"
+                className="text-lg lg:text-2xl font-bold text-white text-shadow truncate"
               >
                 {location.pathname === '/pipeline' ? 'Pipeline Management' : getPageTitle(location.pathname)}
               </motion.h1>
-              <p className="text-white/60 text-sm mt-1">
+              <p className="text-white/60 text-xs lg:text-sm mt-1 hidden sm:block">
                 {location.pathname === '/' ? 'Access all company tools and resources' : 
                  location.pathname === '/pipeline' ? 'Drag customer heads through workflow stages' : 
                  location.pathname === '/metrics' ? 'Real-time KPIs and performance indicators for your roofing business' :
@@ -188,18 +188,18 @@ const Header = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
-                className="flex gap-4"
+                className="flex gap-2 lg:gap-4"
               >
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 text-center min-w-[60px]">
-                  <div className="text-xl font-bold text-white">{pipelineStats.total}</div>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-2 lg:p-3 text-center min-w-[50px] lg:min-w-[60px]">
+                  <div className="text-lg lg:text-xl font-bold text-white">{pipelineStats.total}</div>
                   <div className="text-xs text-white/70">Total</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 text-center min-w-[60px]">
-                  <div className="text-xl font-bold text-white">{pipelineStats.active}</div>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-2 lg:p-3 text-center min-w-[50px] lg:min-w-[60px]">
+                  <div className="text-lg lg:text-xl font-bold text-white">{pipelineStats.active}</div>
                   <div className="text-xs text-white/70">Active</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 text-center min-w-[60px]">
-                  <div className="text-xl font-bold text-white">{pipelineStats.completed}</div>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-2 lg:p-3 text-center min-w-[50px] lg:min-w-[60px]">
+                  <div className="text-lg lg:text-xl font-bold text-white">{pipelineStats.completed}</div>
                   <div className="text-xs text-white/70">Completed</div>
                 </div>
               </motion.div>

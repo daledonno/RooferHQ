@@ -38,7 +38,7 @@ function App() {
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <div className="flex h-screen bg-gray-200">
         <Sidebar />
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col lg:ml-0">
           <Header />
           <main className="flex-1 overflow-y-auto">
             <AnimatePresence mode="wait">

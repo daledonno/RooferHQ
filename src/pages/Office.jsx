@@ -152,35 +152,37 @@ const Office = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="p-8"
+      className="p-4 lg:p-8"
     >
       {/* Header with Reorder Controls */}
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6 lg:mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Office Tools</h1>
-          <p className="text-gray-600">Manage your office workflow and tools</p>
+          <h1 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-1 lg:mb-2">Office Tools</h1>
+          <p className="text-gray-600 text-sm lg:text-base">Manage your office workflow and tools</p>
         </div>
         
-        <div className="flex items-center space-x-3">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
           <button
             onClick={toggleReordering}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+            className={`flex items-center justify-center gap-2 px-3 lg:px-4 py-2 rounded-lg transition-all duration-200 ${
               isReordering
                 ? 'bg-accent text-white shadow-lg'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
-            <GripVertical size={18} />
-            {isReordering ? 'Done Reordering' : 'Reorder Modules'}
+            <GripVertical size={16} className="lg:w-5 lg:h-5" />
+            <span className="text-sm lg:text-base">
+              {isReordering ? 'Done Reordering' : 'Reorder Modules'}
+            </span>
           </button>
           
           {isReordering && (
             <button
               onClick={resetOrder}
-              className="flex items-center gap-2 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
+              className="flex items-center justify-center gap-2 px-3 lg:px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
             >
-              <RotateCcw size={18} />
-              Reset Order
+              <RotateCcw size={16} className="lg:w-5 lg:h-5" />
+              <span className="text-sm lg:text-base">Reset Order</span>
             </button>
           )}
         </div>
@@ -191,9 +193,9 @@ const Office = () => {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4"
+          className="mb-4 lg:mb-6 bg-blue-50 border border-blue-200 rounded-lg p-3 lg:p-4"
         >
-          <p className="text-blue-800 text-sm">
+          <p className="text-blue-800 text-xs lg:text-sm">
             <strong>Reorder Mode:</strong> Drag and drop modules to rearrange them. Your changes will be saved automatically.
           </p>
         </motion.div>
@@ -236,8 +238,8 @@ const Office = () => {
           >
             {/* Drag Handle */}
             {isReordering && (
-              <div className="absolute -top-2 -right-2 w-8 h-8 bg-accent text-white rounded-full flex items-center justify-center shadow-lg z-20">
-                <GripVertical size={16} />
+              <div className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 w-6 h-6 lg:w-8 lg:h-8 bg-accent text-white rounded-full flex items-center justify-center shadow-lg z-20">
+                <GripVertical size={12} className="lg:w-4 lg:h-4" />
               </div>
             )}
             
