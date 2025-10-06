@@ -19,10 +19,9 @@ import {
   X
 } from 'lucide-react';
 
-const Sidebar = () => {
+const Sidebar = ({ isMobileOpen, setIsMobileOpen }) => {
   const location = useLocation();
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   // Close mobile sidebar when route changes
   useEffect(() => {
@@ -55,14 +54,6 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Mobile Menu Button */}
-      <button
-        onClick={() => setIsMobileOpen(true)}
-        className="lg:hidden fixed top-4 left-4 z-50 bg-accent text-white p-3 rounded-lg shadow-lg hover:bg-accent/90 transition-colors"
-      >
-        <Menu size={20} />
-      </button>
-
       {/* Mobile Overlay */}
       <AnimatePresence>
         {isMobileOpen && (

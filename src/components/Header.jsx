@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Menu } from 'lucide-react';
 import logo from '../assets/Top-Logowhite.png';
 import homeBanner from '../assets/Homebanner.png';
 import { useState, useEffect } from 'react';
@@ -19,7 +19,7 @@ const bannerImages = {
   '/settings': 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&h=400&q=80'
 };
 
-const Header = () => {
+const Header = ({ isMobileOpen, setIsMobileOpen }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const [pipelineStats, setPipelineStats] = useState({ total: 0, active: 0, completed: 0 });
@@ -204,6 +204,14 @@ const Header = () => {
                 </div>
               </motion.div>
             )}
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileOpen(true)}
+              className="lg:hidden bg-white/10 hover:bg-white/20 text-white p-2 rounded-lg transition-colors border border-white/20"
+            >
+              <Menu size={20} />
+            </button>
 
 
       </div>

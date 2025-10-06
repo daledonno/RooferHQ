@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 
@@ -34,13 +35,15 @@ import TakeAPicture from './pages/TakeAPicture';
 import Attendance from './pages/Attendance';
 
 function App() {
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+
   return (
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <div className="flex h-screen bg-gray-200">
-        <Sidebar />
+        <Sidebar isMobileOpen={isMobileOpen} setIsMobileOpen={setIsMobileOpen} />
         <div className="flex-1 flex flex-col">
-          <Header />
-          <main className="flex-1 overflow-y-auto pt-16 lg:pt-0">
+          <Header isMobileOpen={isMobileOpen} setIsMobileOpen={setIsMobileOpen} />
+          <main className="flex-1 overflow-y-auto">
             <AnimatePresence mode="wait">
                   <Routes>
                     <Route path="/" element={<Home />} />
