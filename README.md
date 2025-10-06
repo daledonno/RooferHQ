@@ -266,11 +266,23 @@ npm run build
 - **Hot Reload**: Enabled
 - **Linting**: ESLint configured
 
+### **Production Deployment**
+- **Landing Page**: https://roofer-hq.vercel.app
+- **Status**: ✅ Live and Deployed
+- **Video Testimonials**: TikTok-style vertical videos included
+- **Mobile Responsive**: Fully optimized for all devices
+
 ---
 
 ## 📝 Update Log
 
 ### **Latest Updates**
+- **2025-01-XX**: **NEW FEATURE**: Video Testimonials - TikTok-style vertical video testimonials on landing page
+- **2025-01-XX**: **FIX**: Character SVGs - Fixed character avatars not displaying in Pipeline page
+- **2025-01-XX**: **FIX**: Horizontal Scrolling - Eliminated horizontal scroll issues across all pages
+- **2025-01-XX**: **DESIGN UPDATE**: Pipeline Padding - Made side padding consistent with other pages
+- **2025-01-XX**: **DEPLOYMENT**: Vercel Integration - Landing page deployed with video testimonials
+- **2025-01-XX**: **MOBILE RESPONSIVE**: Home, Office, and Pipeline pages fully mobile optimized
 - **2025-01-XX**: **NEW FEATURE**: High-Converting Landing Page - Psychology-driven marketing page with testimonials, pricing, and conversion optimization
 - **2025-01-XX**: **NEW FEATURE**: Google Calendar Integration - Click-to-add calendar events from Pipeline with smart event suggestions
 - **2025-01-XX**: **NEW FEATURE**: Social Media Post Creation - AI-powered content generation with image creation and scheduling
@@ -588,6 +600,13 @@ The Pipeline page provides a comprehensive customer management system:
 ### **Psychology-Driven Marketing Page**
 
 The landing page (`landing-page.html`) is a complete marketing solution designed to convert visitors into customers:
+
+#### **Video Testimonials Section**
+- **TikTok-Style Videos**: Vertical 9:16 aspect ratio videos for modern social media feel
+- **3 Video Testimonials**: testimonial1.mp4, testimonial2.mp4, testimonial3.mp4
+- **Professional Layout**: Responsive grid with hover effects and play buttons
+- **Customer Context**: Name, company, and key quote for each testimonial
+- **Mobile Optimized**: Perfect viewing experience on all devices
 
 #### **Conversion Optimization Features**
 - **Emotional Hooks**: "Stop Losing $50,000+ Every Year to Disorganization"
