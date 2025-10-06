@@ -58,32 +58,32 @@ const Sidebar = () => {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileOpen(true)}
-        className="lg:hidden fixed top-4 left-4 z-50 bg-accent text-white p-2 rounded-lg shadow-lg"
+        className="lg:hidden fixed top-4 left-4 z-50 bg-accent text-white p-3 rounded-lg shadow-lg hover:bg-accent/90 transition-colors"
       >
-        <Menu size={24} />
+        <Menu size={20} />
       </button>
 
       {/* Mobile Overlay */}
-      {isMobileOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="lg:hidden fixed inset-0 bg-black/50 z-40"
-          onClick={() => setIsMobileOpen(false)}
-        />
-      )}
+      <AnimatePresence>
+        {isMobileOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="lg:hidden fixed inset-0 bg-black/50 z-40"
+            onClick={() => setIsMobileOpen(false)}
+          />
+        )}
+      </AnimatePresence>
 
       {/* Sidebar */}
-      <motion.aside 
-        initial={{ x: -300 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+      <aside 
         className={`
           ${isCollapsed ? 'w-16' : 'w-64'} 
-          bg-black flex flex-col transition-all duration-300
+          bg-black flex flex-col transition-transform duration-300 ease-in-out
           fixed lg:relative z-50 h-full
-          ${isMobileOpen ? 'translate-x-0' : 'lg:translate-x-0 -translate-x-full'}
+          ${isMobileOpen ? 'translate-x-0' : '-translate-x-full'}
+          lg:translate-x-0
         `}
       >
       {/* Logo */}
@@ -226,7 +226,7 @@ const Sidebar = () => {
           )}
         </AnimatePresence>
       </div>
-    </motion.aside>
+    </aside>
     </>
   );
 };
