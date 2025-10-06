@@ -39,11 +39,11 @@ function App() {
 
   return (
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-      <div className="flex h-screen bg-gray-200">
+      <div className="flex h-screen bg-gray-200 overflow-x-hidden">
         <Sidebar isMobileOpen={isMobileOpen} setIsMobileOpen={setIsMobileOpen} />
         <div className="flex-1 flex flex-col">
           <Header isMobileOpen={isMobileOpen} setIsMobileOpen={setIsMobileOpen} />
-          <main className="flex-1 overflow-y-auto">
+          <main className="flex-1 overflow-y-auto overflow-x-hidden">
             <AnimatePresence mode="wait">
                   <Routes>
                     <Route path="/" element={<Home />} />
