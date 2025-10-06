@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RooferHQ - The All-in-One Software That's Revolutionizing Roofing Businesses</title>
+    <meta name="description" content="Stop losing money on disorganized operations. RooferHQ is the complete business management system that's helping roofing companies increase revenue by 40% while working 20% less.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'accent': '#FF9100',
+                        'dark': '#1a1b2e',
+                        'primary': '#2d3748',
+                        'secondary': '#4a5568',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF9100' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50">
+    
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 hero-pattern overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl float-animation"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/30 rounded-full blur-3xl float-animation" style="animation-delay: -3s;"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent/10 rounded-full blur-2xl float-animation" style="animation-delay: -1.5s;"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="relative z-10 px-6 py-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                        <span class="text-accent font-bold text-xl">R</span>
+                    </div>
+                    <span class="text-white text-2xl font-bold">RooferHQ</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-white/90 hover:text-white transition-colors">Features</a>
+                    <a href="#pricing" class="text-white/90 hover:text-white transition-colors">Pricing</a>
+                    <a href="#testimonials" class="text-white/90 hover:text-white transition-colors">Reviews</a>
+                    <button class="bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column - Text Content -->
+                <div class="text-white">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                        <div class="w-2 h-2 bg-green-400 rounded-full pulse-animation"></div>
+                        <span class="text-sm font-medium">Trusted by 500+ Roofing Companies</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-6">
+                        Stop Losing 
+                        <span class="text-accent">$50,000+</span>
+                        <br>Every Year to
+                        <span class="text-accent">Disorganization</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed">
+                        The complete business management system that's helping roofing companies 
+                        <span class="font-bold text-accent">increase revenue by 40%</span> 
+                        while working 
+                        <span class="font-bold text-accent">20% less</span>.
+                    </p>
+
+                    <!-- Pain Point Hook -->
+                    <div class="bg-red-500/20 border border-red-400/30 rounded-lg p-6 mb-8">
+                        <p class="text-lg font-semibold mb-2">⚠️ Are you tired of:</p>
+                        <ul class="space-y-2 text-white/90">
+                            <li class="flex items-center space-x-2">
+                                <span class="text-red-400">✗</span>
+                                <span>Losing customers because you can't keep track of quotes and follow-ups?</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span class="text-red-400">✗</span>
+                                <span>Wasting hours every day on paperwork and admin tasks?</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span class="text-red-400">✗</span>
+                                <span>Missing appointments and losing money on no-shows?</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button class="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all transform hover:scale-105 shadow-2xl">
+                            🚀 Start Your Free 14-Day Trial
+                        </button>
+                        <button class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
+                            📹 Watch 2-Min Demo
+                        </button>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="flex items-center space-x-6 text-sm text-white/80">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-400">✓</span>
+                            <span>No Credit Card Required</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-400">✓</span>
+                            <span>Setup in 5 Minutes</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-400">✓</span>
+                            <span>Cancel Anytime</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Product Image/Demo -->
+                <div class="relative">
+                    <!-- Main Product Screenshot -->
+                    <div class="relative z-10 bg-white rounded-2xl shadow-2xl overflow-hidden">
+                        <div class="bg-gray-100 h-8 flex items-center px-4 space-x-2">
+                            <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                        </div>
+                        <div class="p-8">
+                            <!-- Placeholder for RooferHQ Dashboard Screenshot -->
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg h-96 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <span class="text-4xl">🏠</span>
+                                    </div>
+                                    <p class="text-gray-600 font-semibold">RooferHQ Dashboard</p>
+                                    <p class="text-sm text-gray-500">Complete Business Management</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg">
+                        +40% Revenue
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg">
+                        -20% Work Time
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60">
+            <div class="flex flex-col items-center space-y-2">
+                <span class="text-sm">Scroll to see how we solve your problems</span>
+                <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+                    <div class="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN POINTS SECTION -->
+    <section id="pain-points" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                    The Hidden Costs Killing Your 
+                    <span class="text-red-500">Roofing Business</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Every day you're not using RooferHQ, you're losing money. Here's what's really happening to your business:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pain Point 1 -->
+                <div class="bg-red-50 border-2 border-red-200 rounded-2xl p-8 hover:shadow-lg transition-all">
+                    <div class="text-red-500 text-4xl mb-4">💸</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Lost Revenue from Poor Follow-ups</h3>
+                    <p class="text-gray-600 mb-4">
+                        Studies show that 80% of sales require 5 follow-up calls, but most roofing companies only make 2. 
+                        <strong class="text-red-600">You're losing $15,000+ per month</strong> in missed opportunities.
+                    </p>
+                    <div class="bg-red-100 rounded-lg p-4">
+                        <p class="text-red-800 font-semibold">💡 The Fix: Automated follow-up sequences that never miss a lead.</p>
+                    </div>
+                </div>
+
+                <!-- Pain Point 2 -->
+                <div class="bg-orange-50 border-2 border-orange-200 rounded-2xl p-8 hover:shadow-lg transition-all">
+                    <div class="text-orange-500 text-4xl mb-4">⏰</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Wasting 3+ Hours Daily on Admin</h3>
+                    <p class="text-gray-600 mb-4">
+                        Manual paperwork, scattered spreadsheets, and disorganized systems are eating up your productive time. 
+                        <strong class="text-orange-600">That's 15+ hours per week</strong> you could be spending on actual roofing work.
+                    </p>
+                    <div class="bg-orange-100 rounded-lg p-4">
+                        <p class="text-orange-800 font-semibold">💡 The Fix: Everything automated and organized in one place.</p>
+                    </div>
+                </div>
+
+                <!-- Pain Point 3 -->
+                <div class="bg-purple-50 border-2 border-purple-200 rounded-2xl p-8 hover:shadow-lg transition-all">
+                    <div class="text-purple-500 text-4xl mb-4">📞</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Missing Calls = Missing Money</h3>
+                    <p class="text-gray-600 mb-4">
+                        Every missed call is a potential $5,000+ job walking away. With no system to track leads, 
+                        <strong class="text-purple-600">you're losing 30% of your potential revenue</strong> to competitors.
+                    </p>
+                    <div class="bg-purple-100 rounded-lg p-4">
+                        <p class="text-purple-800 font-semibold">💡 The Fix: Smart lead tracking that captures every opportunity.</p>
+                    </div>
+                </div>
+
+                <!-- Pain Point 4 -->
+                <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-8 hover:shadow-lg transition-all">
+                    <div class="text-blue-500 text-4xl mb-4">🗂️</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Chaotic Job Management</h3>
+                    <p class="text-gray-600 mb-4">
+                        No clear system for tracking job progress, materials, or timelines leads to delays, 
+                        <strong class="text-blue-600">costing you $8,000+ per project</strong> in inefficiencies and customer complaints.
+                    </p>
+                    <div class="bg-blue-100 rounded-lg p-4">
+                        <p class="text-blue-800 font-semibold">💡 The Fix: Complete project management from quote to completion.</p>
+                    </div>
+                </div>
+
+                <!-- Pain Point 5 -->
+                <div class="bg-green-50 border-2 border-green-200 rounded-2xl p-8 hover:shadow-lg transition-all">
+                    <div class="text-green-500 text-4xl mb-4">📊</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Flying Blind Without Data</h3>
+                    <p class="text-gray-600 mb-4">
+                        Making decisions based on gut feelings instead of real data means you're missing opportunities and 
+                        <strong class="text-green-600">leaving money on the table every single day</strong>.
+                    </p>
+                    <div class="bg-green-100 rounded-lg p-4">
+                        <p class="text-green-800 font-semibold">💡 The Fix: Real-time analytics that show exactly where your money is.</p>
+                    </div>
+                </div>
+
+                <!-- Pain Point 6 -->
+                <div class="bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-8 hover:shadow-lg transition-all">
+                    <div class="text-yellow-500 text-4xl mb-4">😤</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Team Frustration & Turnover</h3>
+                    <p class="text-gray-600 mb-4">
+                        Disorganized systems frustrate your team, leading to mistakes, delays, and 
+                        <strong class="text-yellow-600">high turnover costs of $15,000+ per employee</strong>.
+                    </p>
+                    <div class="bg-yellow-100 rounded-lg p-4">
+                        <p class="text-yellow-800 font-semibold">💡 The Fix: Streamlined processes that make everyone's job easier.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="text-center mt-16">
+                <div class="bg-red-500 text-white rounded-2xl p-8 max-w-4xl mx-auto">
+                    <h3 class="text-3xl font-bold mb-4">The Math is Simple</h3>
+                    <p class="text-xl mb-6">
+                        If you're losing just <strong>$10,000 per month</strong> to these problems, 
+                        that's <strong>$120,000 per year</strong> walking out the door.
+                    </p>
+                    <p class="text-2xl font-bold">
+                        RooferHQ costs less than $200/month. 
+                        <span class="text-yellow-300">The ROI is 5,000%+</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION OVERVIEW SECTION -->
+    <section id="solution" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                    How RooferHQ Transforms Your 
+                    <span class="text-accent">Roofing Business</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    One integrated system that handles everything from lead capture to project completion. 
+                    <strong>No more juggling 10 different tools.</strong>
+                </p>
+            </div>
+
+            <!-- Solution Flow -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <!-- Left: Problem State -->
+                <div class="bg-red-50 border-2 border-red-200 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-red-800 mb-6 text-center">❌ Your Current Chaos</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3 bg-white rounded-lg p-4">
+                            <span class="text-red-500 text-2xl">📱</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Phone calls scattered everywhere</p>
+                                <p class="text-sm text-gray-600">Notes on napkins, sticky notes, random apps</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-white rounded-lg p-4">
+                            <span class="text-red-500 text-2xl">📊</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Excel spreadsheets everywhere</p>
+                                <p class="text-sm text-gray-600">Different files for quotes, customers, jobs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-white rounded-lg p-4">
+                            <span class="text-red-500 text-2xl">📅</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Calendar chaos</p>
+                                <p class="text-sm text-gray-600">Missed appointments, double bookings</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-white rounded-lg p-4">
+                            <span class="text-red-500 text-2xl">💸</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Lost revenue everywhere</p>
+                                <p class="text-sm text-gray-600">No follow-up system, forgotten quotes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Solution State -->
+                <div class="bg-green-50 border-2 border-green-200 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-green-800 mb-6 text-center">✅ With RooferHQ</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3 bg-white rounded-lg p-4">
+                            <span class="text-green-500 text-2xl">🎯</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Everything in one dashboard</p>
+                                <p class="text-sm text-gray-600">All leads, jobs, and data organized perfectly</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-white rounded-lg p-4">
+                            <span class="text-green-500 text-2xl">🤖</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Automated follow-ups</p>
+                                <p class="text-sm text-gray-600">Never miss a lead or forget a follow-up</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-white rounded-lg p-4">
+                            <span class="text-green-500 text-2xl">📈</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">Real-time analytics</p>
+                                <p class="text-sm text-gray-600">See exactly where your money is coming from</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-white rounded-lg p-4">
+                            <span class="text-green-500 text-2xl">💰</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">40% more revenue</p>
+                                <p class="text-sm text-gray-600">Proven results from 500+ roofing companies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Benefits Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">📞</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Smart Lead Management</h3>
+                    <p class="text-gray-600">
+                        Capture every lead, track every interaction, and never lose a potential customer again.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">📋</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Automated Quotes</h3>
+                    <p class="text-gray-600">
+                        Generate professional quotes in seconds with our smart templates and pricing tools.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">📅</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Perfect Scheduling</h3>
+                    <p class="text-gray-600">
+                        Never double-book again. Smart scheduling that considers travel time and weather.
+                    </p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">📊</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Real-Time Analytics</h3>
+                    <p class="text-gray-600">
+                        See exactly where your money is coming from and where you're losing it.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Transformation Promise -->
+            <div class="mt-20 text-center">
+                <div class="bg-gradient-to-r from-accent to-orange-600 text-white rounded-2xl p-12 max-w-4xl mx-auto">
+                    <h3 class="text-3xl font-bold mb-6">The RooferHQ Transformation Promise</h3>
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <div>
+                            <div class="text-4xl font-black mb-2">40%</div>
+                            <p class="text-lg">More Revenue</p>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-black mb-2">20%</div>
+                            <p class="text-lg">Less Work Time</p>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-black mb-2">90%</div>
+                            <p class="text-lg">Less Stress</p>
+                        </div>
+                    </div>
+                    <p class="text-xl mt-6 font-semibold">
+                        Or we'll refund every penny. No questions asked.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES & BENEFITS SECTION -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                    Everything You Need to 
+                    <span class="text-accent">Dominate Your Market</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    RooferHQ isn't just software—it's your complete business operating system. 
+                    Every feature designed specifically for roofing companies.
+                </p>
+            </div>
+
+            <!-- Feature Categories -->
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <!-- Lead Management -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+                    <div class="text-blue-500 text-4xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Lead Management</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span>Smart lead capture from all sources</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span>Automated follow-up sequences</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span>Lead scoring and prioritization</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span>Never lose a lead again</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Project Management -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+                    <div class="text-green-500 text-4xl mb-4">🏗️</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Project Management</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span>Complete job tracking from quote to completion</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span>Material and labor cost tracking</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span>Photo documentation and progress reports</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span>Customer communication portal</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Financial Management -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8">
+                    <div class="text-purple-500 text-4xl mb-4">💰</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Financial Management</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span>Automated invoicing and payment tracking</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span>Profit margin analysis per job</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span>Cash flow forecasting</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-500">✓</span>
+                            <span>Tax-ready financial reports</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Detailed Features Grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white text-xl">📞</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Smart Phone Scripts</h3>
+                            <p class="text-gray-600 mb-4">
+                                Never fumble for words again. Our proven scripts handle every objection and close more deals.
+                            </p>
+                            <div class="bg-white rounded-lg p-4">
+                                <p class="text-sm text-gray-600 italic">
+                                    "I've increased my close rate from 15% to 35% using these scripts. They're gold!"
+                                </p>
+                                <p class="text-xs text-gray-500 mt-2">- Mike R., 15-year roofing veteran</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white text-xl">📧</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Email Templates That Convert</h3>
+                            <p class="text-gray-600 mb-4">
+                                Professional email templates for every situation. Copy, paste, customize, and send.
+                            </p>
+                            <div class="bg-white rounded-lg p-4">
+                                <p class="text-sm text-gray-600 italic">
+                                    "My customers actually respond to these emails. It's like having a marketing team!"
+                                </p>
+                                <p class="text-xs text-gray-500 mt-2">- Sarah L., Roofing Company Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white text-xl">🗺️</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Route Optimization</h3>
+                            <p class="text-gray-600 mb-4">
+                                Save 2+ hours daily with smart route planning that considers traffic, weather, and job priorities.
+                            </p>
+                            <div class="bg-white rounded-lg p-4">
+                                <p class="text-sm text-gray-600 italic">
+                                    "I'm doing 3 more jobs per week with the same time. The route optimization is incredible."
+                                </p>
+                                <p class="text-xs text-gray-500 mt-2">- Tom K., 20-year roofing expert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white text-xl">📊</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Real-Time Analytics</h3>
+                            <p class="text-gray-600 mb-4">
+                                See exactly where your money is coming from and where you're losing it. Make data-driven decisions.
+                            </p>
+                            <div class="bg-white rounded-lg p-4">
+                                <p class="text-sm text-gray-600 italic">
+                                    "I found out I was losing $8,000/month on small jobs. This dashboard saved my business."
+                                </p>
+                                <p class="text-xs text-gray-500 mt-2">- David M., Roofing Contractor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF SECTION -->
+    <section id="testimonials" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6">
+                    Join 500+ Roofing Companies 
+                    <span class="text-accent">Already Winning</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Don't just take our word for it. See what real roofing business owners are saying about RooferHQ.
+                </p>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="text-4xl font-black text-accent mb-2">500+</div>
+                    <p class="text-gray-300">Active Companies</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-black text-accent mb-2">$2.3M</div>
+                    <p class="text-gray-300">Revenue Generated</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-black text-accent mb-2">40%</div>
+                    <p class="text-gray-300">Average Revenue Increase</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-black text-accent mb-2">4.9/5</div>
+                    <p class="text-gray-300">Customer Rating</p>
+                </div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Testimonial 1 -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-lg">MR</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Mike Rodriguez</h4>
+                            <p class="text-gray-300 text-sm">Rodriguez Roofing, 15 years</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-200 italic mb-4">
+                        "I was skeptical at first, but RooferHQ literally saved my business. I went from $180K to $320K in revenue in just 8 months. The automated follow-ups alone paid for the software 10 times over."
+                    </p>
+                    <div class="bg-accent/20 rounded-lg p-4">
+                        <p class="text-sm font-semibold text-accent">Before: $15K/month | After: $26K/month</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-lg">SL</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Sarah Johnson</h4>
+                            <p class="text-gray-300 text-sm">Elite Roofing Solutions</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-200 italic mb-4">
+                        "The route optimization feature is incredible. I'm doing 3 more jobs per week with the same time. My team loves how organized everything is now. No more chaos!"
+                    </p>
+                    <div class="bg-accent/20 rounded-lg p-4">
+                        <p class="text-sm font-semibold text-accent">+3 jobs/week, +$12K/month</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-lg">TK</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Tom Kowalski</h4>
+                            <p class="text-gray-300 text-sm">Kowalski Roofing, 20 years</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-200 italic mb-4">
+                        "I found out I was losing $8,000/month on small jobs because I wasn't tracking them properly. The analytics dashboard showed me exactly where my money was going. Game changer!"
+                    </p>
+                    <div class="bg-accent/20 rounded-lg p-4">
+                        <p class="text-sm font-semibold text-accent">Found $8K/month in lost revenue</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-lg">DM</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">David Martinez</h4>
+                            <p class="text-gray-300 text-sm">Martinez Roofing Co.</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-200 italic mb-4">
+                        "The phone scripts are pure gold. My close rate went from 15% to 35% in the first month. I'm closing deals I never would have before. This software pays for itself daily."
+                    </p>
+                    <div class="bg-accent/20 rounded-lg p-4">
+                        <p class="text-sm font-semibold text-accent">Close rate: 15% → 35%</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-lg">JL</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Jennifer Lee</h4>
+                            <p class="text-gray-300 text-sm">Lee Roofing Services</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-200 italic mb-4">
+                        "I was drowning in paperwork and admin tasks. RooferHQ automated everything. I went from working 70 hours a week to 50 hours while making more money. My family finally sees me again!"
+                    </p>
+                    <div class="bg-accent/20 rounded-lg p-4">
+                        <p class="text-sm font-semibold text-accent">-20 hours/week, +40% revenue</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-lg">RB</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Robert Brown</h4>
+                            <p class="text-gray-300 text-sm">Brown & Sons Roofing</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-200 italic mb-4">
+                        "The customer portal is amazing. Customers can see their job progress, make payments, and communicate with us. It's professional and reduces phone calls by 60%. Highly recommend!"
+                    </p>
+                    <div class="bg-accent/20 rounded-lg p-4">
+                        <p class="text-sm font-semibold text-accent">-60% phone calls, +customer satisfaction</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study Highlight -->
+            <div class="bg-gradient-to-r from-accent to-orange-600 rounded-2xl p-12 text-center">
+                <h3 class="text-3xl font-bold mb-6">Real Case Study: Rodriguez Roofing</h3>
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <div class="bg-white/20 rounded-lg p-6">
+                        <div class="text-4xl font-black mb-2">$180K</div>
+                        <p class="text-lg">Annual Revenue (Before)</p>
+                    </div>
+                    <div class="bg-white/20 rounded-lg p-6">
+                        <div class="text-4xl font-black mb-2">$320K</div>
+                        <p class="text-lg">Annual Revenue (After)</p>
+                    </div>
+                    <div class="bg-white/20 rounded-lg p-6">
+                        <div class="text-4xl font-black mb-2">78%</div>
+                        <p class="text-lg">Revenue Increase</p>
+                    </div>
+                </div>
+                <p class="text-xl mb-6">
+                    "RooferHQ didn't just help us grow—it transformed how we do business. 
+                    We're more organized, more profitable, and our customers love the professional experience."
+                </p>
+                <p class="text-lg font-semibold">- Mike Rodriguez, Owner</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                    Simple Pricing That 
+                    <span class="text-accent">Pays for Itself</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    No hidden fees, no long-term contracts, no surprises. 
+                    Just honest pricing that delivers massive ROI.
+                </p>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Starter Plan -->
+                <div class="bg-gray-50 rounded-2xl p-8 border-2 border-gray-200">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                        <p class="text-gray-600 mb-4">Perfect for small teams</p>
+                        <div class="text-4xl font-black text-gray-900 mb-2">$97</div>
+                        <p class="text-gray-600">per month</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Up to 5 team members</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Lead management system</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Basic phone scripts</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Email templates</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Basic analytics</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Email support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                        Start Free Trial
+                    </button>
+                </div>
+
+                <!-- Professional Plan (Most Popular) -->
+                <div class="bg-gradient-to-br from-accent to-orange-600 rounded-2xl p-8 border-2 border-accent relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-accent text-white px-6 py-2 rounded-full text-sm font-bold">MOST POPULAR</span>
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">Professional</h3>
+                        <p class="text-white/90 mb-4">Perfect for growing businesses</p>
+                        <div class="text-4xl font-black text-white mb-2">$197</div>
+                        <p class="text-white/90">per month</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <span class="text-white">✓</span>
+                            <span class="text-white">Up to 15 team members</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-white">✓</span>
+                            <span class="text-white">Advanced lead management</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-white">✓</span>
+                            <span class="text-white">All phone scripts & templates</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-white">✓</span>
+                            <span class="text-white">Route optimization</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-white">✓</span>
+                            <span class="text-white">Advanced analytics</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-white">✓</span>
+                            <span class="text-white">Project management</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-white">✓</span>
+                            <span class="text-white">Customer portal</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-white">✓</span>
+                            <span class="text-white">Priority support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-accent py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+                        Start Free Trial
+                    </button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-gray-50 rounded-2xl p-8 border-2 border-gray-200">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-600 mb-4">For large operations</p>
+                        <div class="text-4xl font-black text-gray-900 mb-2">$397</div>
+                        <p class="text-gray-600">per month</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Unlimited team members</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Everything in Professional</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Custom integrations</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Advanced reporting</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">White-label options</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Dedicated account manager</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">24/7 phone support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+
+            <!-- ROI Calculator -->
+            <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-12 text-center">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">ROI Calculator</h3>
+                <p class="text-xl text-gray-600 mb-8">
+                    See how much money RooferHQ will save you every month
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white rounded-lg p-6 shadow-lg">
+                        <div class="text-3xl font-black text-green-600 mb-2">$2,400</div>
+                        <p class="text-gray-600">Saved on admin time</p>
+                        <p class="text-sm text-gray-500">(20 hours × $30/hour)</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-lg">
+                        <div class="text-3xl font-black text-green-600 mb-2">$3,200</div>
+                        <p class="text-gray-600">From better follow-ups</p>
+                        <p class="text-sm text-gray-500">(2 extra closes × $1,600)</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-lg">
+                        <div class="text-3xl font-black text-green-600 mb-2">$1,800</div>
+                        <p class="text-gray-600">From route optimization</p>
+                        <p class="text-sm text-gray-500">(1 extra job × $1,800)</p>
+                    </div>
+                </div>
+                <div class="mt-8 bg-accent text-white rounded-lg p-6 max-w-2xl mx-auto">
+                    <div class="text-4xl font-black mb-2">$7,400</div>
+                    <p class="text-xl font-semibold">Total Monthly Savings</p>
+                    <p class="text-lg">vs. $197/month cost = <span class="font-bold">3,700% ROI</span></p>
+                </div>
+            </div>
+
+            <!-- Urgency Section -->
+            <div class="mt-16 bg-red-500 text-white rounded-2xl p-8 text-center">
+                <h3 class="text-2xl font-bold mb-4">⚡ Limited Time Offer ⚡</h3>
+                <p class="text-xl mb-6">
+                    Get your first 3 months for just <strong>$97/month</strong> 
+                    (Regular price $197/month)
+                </p>
+                <p class="text-lg mb-6">
+                    This offer expires in <strong id="countdown">23:59:59</strong>
+                </p>
+                <button class="bg-white text-red-500 px-8 py-4 rounded-lg text-xl font-bold hover:bg-gray-100 transition-colors">
+                    Claim Your Discount Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                    Frequently Asked 
+                    <span class="text-accent">Questions</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Got questions? We've got answers. Here are the most common questions we get from roofing business owners.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">❓ "Is RooferHQ really worth the investment?"</h3>
+                    <p class="text-gray-600 mb-4">
+                        Absolutely. Our customers typically see a 3,700% ROI in their first month. If you're not making at least $2,000 more per month after using RooferHQ, we'll refund your entire year's subscription. That's how confident we are in our results.
+                    </p>
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <p class="text-green-800 font-semibold">💡 Real Example: Mike Rodriguez went from $15K/month to $26K/month in just 8 months.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">❓ "How long does it take to see results?"</h3>
+                    <p class="text-gray-600 mb-4">
+                        Most customers see immediate improvements in organization within the first week. Revenue increases typically start showing within 30 days as you begin using the automated follow-up systems and better lead management.
+                    </p>
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <p class="text-blue-800 font-semibold">📈 Timeline: Week 1 = Better organization | Month 1 = Revenue increase | Month 3 = 40%+ growth</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">❓ "What if I'm not tech-savvy? Is it hard to use?"</h3>
+                    <p class="text-gray-600 mb-4">
+                        RooferHQ was designed specifically for roofing business owners, not tech experts. We provide free setup assistance, video tutorials, and ongoing support. Most customers are up and running within 30 minutes.
+                    </p>
+                    <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                        <p class="text-purple-800 font-semibold">🎯 We even do the initial setup for you - just tell us about your business and we'll configure everything.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">❓ "Can I try it before I buy it?"</h3>
+                    <p class="text-gray-600 mb-4">
+                        Yes! We offer a 14-day free trial with full access to all features. No credit card required. If you don't see immediate value, simply cancel - no questions asked.
+                    </p>
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                        <p class="text-yellow-800 font-semibold">🆓 Free trial includes: Full access + Free setup + Personal onboarding call + 30-day money-back guarantee</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">❓ "What if I need help or have questions?"</h3>
+                    <p class="text-gray-600 mb-4">
+                        We provide multiple support channels: email support, live chat, video tutorials, and phone support for Professional and Enterprise plans. Our average response time is under 2 hours during business hours.
+                    </p>
+                    <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+                        <p class="text-indigo-800 font-semibold">📞 Support includes: Email, Live Chat, Video Tutorials, Phone Support, and Personal Account Manager (Enterprise)</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">❓ "Is my data safe and secure?"</h3>
+                    <p class="text-gray-600 mb-4">
+                        Absolutely. We use bank-level encryption, regular backups, and comply with all data protection regulations. Your data is stored securely in the cloud with 99.9% uptime guarantee.
+                    </p>
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <p class="text-red-800 font-semibold">🔒 Security features: Bank-level encryption, Regular backups, GDPR compliant, 99.9% uptime, Daily security monitoring</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">❓ "What if I want to cancel? Are there any hidden fees?"</h3>
+                    <p class="text-gray-600 mb-4">
+                        No hidden fees, no cancellation fees, no long-term contracts. You can cancel anytime with just one click. We're confident you'll love RooferHQ, but if you don't, we make it easy to leave.
+                    </p>
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <p class="text-green-800 font-semibold">✅ Cancel anytime | No hidden fees | No long-term contracts | 30-day money-back guarantee</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">❓ "Do you offer training for my team?"</h3>
+                    <p class="text-gray-600 mb-4">
+                        Yes! We provide comprehensive training including video tutorials, live training sessions, and personalized onboarding. We'll train your entire team to ensure everyone gets maximum value from RooferHQ.
+                    </p>
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <p class="text-orange-800 font-semibold">🎓 Training includes: Video tutorials, Live training sessions, Team onboarding, Best practices guide, Ongoing support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center">
+                <h2 class="text-4xl lg:text-6xl font-black mb-6">
+                    Ready to Transform Your 
+                    <span class="text-accent">Roofing Business?</span>
+                </h2>
+                <p class="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                    Join 500+ roofing companies already using RooferHQ to increase revenue, reduce stress, and grow their business. 
+                    <strong class="text-accent">Your competition is already ahead of you.</strong>
+                </p>
+
+                <!-- Risk Reversal -->
+                <div class="bg-red-500/20 border border-red-400/30 rounded-2xl p-8 mb-12 max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-4">⚠️ Don't Let This Happen to You</h3>
+                    <p class="text-lg mb-6">
+                        Every day you wait is another day your competition gets further ahead. 
+                        While you're struggling with disorganized systems, they're closing more deals, 
+                        making more money, and taking your customers.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6 text-left">
+                        <div class="bg-red-600/20 rounded-lg p-4">
+                            <h4 class="font-bold text-red-300 mb-2">❌ Without RooferHQ:</h4>
+                            <ul class="space-y-1 text-sm">
+                                <li>• Losing $10,000+ per month to disorganization</li>
+                                <li>• Working 60+ hours per week</li>
+                                <li>• Missing opportunities daily</li>
+                                <li>• Stressed and overwhelmed</li>
+                                <li>• Falling behind competitors</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-600/20 rounded-lg p-4">
+                            <h4 class="font-bold text-green-300 mb-2">✅ With RooferHQ:</h4>
+                            <ul class="space-y-1 text-sm">
+                                <li>• 40% more revenue in 90 days</li>
+                                <li>• Working 20% less time</li>
+                                <li>• Never missing an opportunity</li>
+                                <li>• Organized and stress-free</li>
+                                <li>• Dominating your market</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+                    <button class="bg-accent hover:bg-accent/90 text-white px-12 py-6 rounded-2xl text-2xl font-bold transition-all transform hover:scale-105 shadow-2xl">
+                        🚀 Start Your Free 14-Day Trial
+                    </button>
+                    <button class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-12 py-6 rounded-2xl text-2xl font-semibold transition-all">
+                        📞 Schedule a Demo Call
+                    </button>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="text-3xl font-black text-accent mb-2">500+</div>
+                        <p class="text-gray-300">Happy Customers</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-black text-accent mb-2">4.9/5</div>
+                        <p class="text-gray-300">Customer Rating</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-black text-accent mb-2">14</div>
+                        <p class="text-gray-300">Day Free Trial</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-black text-accent mb-2">30</div>
+                        <p class="text-gray-300">Day Money Back</p>
+                    </div>
+                </div>
+
+                <!-- Final Urgency -->
+                <div class="bg-gradient-to-r from-red-500 to-red-600 rounded-2xl p-8 max-w-4xl mx-auto">
+                    <h3 class="text-3xl font-bold mb-4">⚡ Limited Time: 50% Off Your First 3 Months</h3>
+                    <p class="text-xl mb-6">
+                        Get RooferHQ Professional for just <strong>$97/month</strong> for your first 3 months 
+                        (Regular price $197/month). This offer expires in:
+                    </p>
+                    <div class="text-4xl font-black mb-6" id="final-countdown">23:59:59</div>
+                    <button class="bg-white text-red-500 px-12 py-6 rounded-2xl text-2xl font-bold hover:bg-gray-100 transition-colors">
+                        Claim Your 50% Discount Now
+                    </button>
+                    <p class="text-sm mt-4 opacity-90">
+                        *Offer expires when timer reaches zero. No extensions. No exceptions.
+                    </p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="mt-16 text-center">
+                    <p class="text-gray-400 mb-4">Questions? We're here to help.</p>
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                        <a href="tel:+1-555-ROOFER" class="text-accent hover:text-accent/80 font-semibold">
+                            📞 1-555-ROOFER
+                        </a>
+                        <a href="mailto:support@rooferhq.com" class="text-accent hover:text-accent/80 font-semibold">
+                            ✉️ support@rooferhq.com
+                        </a>
+                        <a href="#" class="text-accent hover:text-accent/80 font-semibold">
+                            💬 Live Chat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">R</span>
+                        </div>
+                        <span class="text-2xl font-bold">RooferHQ</span>
+                    </div>
+                    <p class="text-gray-400">
+                        The complete business management system for roofing companies. 
+                        Increase revenue by 40% while working 20% less.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-accent transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Demo</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Free Trial</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-accent transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Training</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-accent transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 RooferHQ. All rights reserved. | Made with ❤️ for roofing professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const countdownDate = new Date().getTime() + (24 * 60 * 60 * 1000); // 24 hours from now
+            const distance = countdownDate - now;
+
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const countdownElement = document.getElementById('countdown');
+            const finalCountdownElement = document.getElementById('final-countdown');
+            
+            if (countdownElement) {
+                countdownElement.innerHTML = hours + ":" + minutes + ":" + seconds;
+            }
+            if (finalCountdownElement) {
+                finalCountdownElement.innerHTML = hours + ":" + minutes + ":" + seconds;
+            }
+
+            if (distance < 0) {
+                if (countdownElement) countdownElement.innerHTML = "EXPIRED";
+                if (finalCountdownElement) finalCountdownElement.innerHTML = "EXPIRED";
+            }
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+    </script>
+
+</body>
+</html>
